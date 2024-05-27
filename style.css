@@ -1,223 +1,167 @@
-body{
-    padding: 0;
-    margin: 0;
-}
-header{
-    background-color: rgb(3, 3, 3);
-    color: aliceblue;
-}
-.website-header{
-padding: 5px;
-height: 130px;
-display:flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
-}
-.website-header img{
-    width: 230px;
-    height: 130px;
-    }
-.breaking-news-section{
-	height: 70px;
-    display: flex;
-}
-#btext{
-	width: 200px;
-	font-size: 16px;
-	text-transform: uppercase;
-	color:#e08b6c;
-	font-weight: 600;
-	margin: auto 0;
-}
-#bntime{
-width: 200px;
-font-size: 16px;
-text-transform: uppercase;
-color:rgb(205, 26, 13);
+/* style.css */
 
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
-.breaking-news{
-    padding: 30px;
-    color: aliceblue;
-    font-weight: 800;
-    display: inline-block;
+
+/* Header styles */
+header {
+    background-color: #f8f9fa;
+    padding: 10px;
 }
-.bntime{
-    display: inline-block;
-    color: rgba(255, 255, 255,0.5);
-    padding: 0 10px;
-    font-size: 12px;
+
+.website-header {
+    text-align: center;
 }
-#popular-news{
-	display: flex;
-	flex-wrap: wrap;
-	margin: 30px 5%;
+
+.website-header img {
+    max-width: 100%;
+    height: auto;
 }
-#popular-news h2{
-	margin: 0;
-	padding: 5px;
-	color: #fdfcfb;
+
+/* Breaking news section */
+.breaking-news-section {
+    background-color: #ffc107;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
 }
-#featured h2{
-	background-color: black;
+
+.breaking-news {
+    color: #000;
+    text-decoration: none;
 }
-#latest h2{
-	background-color: darkred;
+
+.breaking-news:hover {
+    text-decoration: underline;
 }
-#latest img{
-	height: 300px;
+
+/* Main content styles */
+main {
+    padding: 20px;
 }
-#our-picks img{
-	height: 300px;
+
+#popular-news h2,
+#latest h2,
+#our-picks h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
-#our-picks h2{
-	background-color: darkblue;
+
+#featured, #latest, #our-picks {
+    margin-bottom: 20px;
 }
-#featured img{
-	height: 600px;
+
+/* Carousel styles */
+.carousel-inner img {
+    width: 100%;
+    height: auto;
 }
-#latest,#our-picks{
-	flex: 1;
+
+/* News section styles */
+.news-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
-#featured h2{
-    background-color: blue;
+
+.news-container img {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 20px;
 }
-#popular-news img{
-	width: 100%;
-	filter: brightness(0.7);
-	transition-duration: 500ms;
+
+.carousel-text {
+    font-size: 1.2em;
+    font-weight: bold;
 }
-.carousel, .news-container{
-	position: relative;
+
+/* More news section */
+.more-news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.carousel-text{
-	position: absolute;
-	word-wrap: normal;
-	bottom: 5px;
-	z-index: 2;
-	color: #fff;
-	font-size: 24px;
-	font-weight: bolder;
-	padding: 0 10px;
-	transition-duration: 500ms;
+
+.news-section,
+aside {
+    flex: 1 1 48%;
+    box-sizing: border-box;
 }
-.news-container .carousel-text{
-	font-size: 18px;
+
+.news-section {
+    margin-bottom: 20px;
 }
-.carousel-date{
-	display: block;
-	text-align: center;
-	font-size: 14px;
-	color: rgba(255,255,255,0.7);
-	font-weight: 300;
+
+.news-section img,
+.recent-news img {
+    width: 100%;
+    height: auto;
 }
-section{
-	cursor: pointer;
+
+.recent-news {
+    margin-bottom: 10px;
 }
-.news-container:hover > .carousel-text{
-	bottom: 10px;
+
+.recent-news p {
+    margin: 5px 0;
 }
-.news-container:hover > img{
-	filter: brightness(0.4);
+
+/* Footer styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
-.more-news{
-	background-color: black;
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0 5%;
-	justify-content: space-between;
-	color: #fff;
+
+.about,
+.singup {
+    margin-bottom: 20px;
 }
-.news-section{
-	display: flex;
-	flex-wrap: wrap;
-	flex-basis: 70%;
-	justify-content: space-between;
+
+.social-icons-footer a {
+    color: #fff;
+    margin: 0 5px;
+    font-size: 1.5em;
+    text-decoration: none;
 }
-aside{
-	width: 90%;
-	padding: 10px;
-	flex-basis: 25%;
-	border: 1px solid #fff;
-	border-radius: 5px;
-	margin: auto 0;
+
+.sign_up a {
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
 }
-p{
-	text-align: justify;
+
+.sign_up a:hover {
+    background-color: #0056b3;
 }
-.recent-news{
-	display: flex;
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .news-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news-container img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .more-news {
+        flex-direction: column;
+    }
+
+    .news-section,
+    aside {
+        flex: 1 1 100%;
+    }
 }
-.recent-news img{
-	width: 70px;
-	height: 70px; 
-	margin: 10px;
-}
-.recent-news p{
-	font-size: 14px;
-	font-weight: bold;
-	margin: auto;
-}
-.social-links{
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	padding: 5%;
-	justify-content: space-around;
-}
-.social-icons-footer i{
-	font-size: 37px;
-	padding: 5px;
-}
-@media only screen and (max-width: 600px) {
-	.breaking-news-section{	
-		padding: 10px;
-		flex-wrap: wrap;
-	}
-	#featured{
-		flex: auto;
-	}	
-	.news-section, aside, .news-section article,.social-links section{
-		flex-basis: 100%;		
-	}
-	aside{
-		border-width: 0;
-	}
-	.website-header img{
-		width: 35px;
-		height: 35px;
-		padding: 5px;
-	}
-	.website-header h1{
-		font-size: 15px;
-	}
-	.social-icons{
-		flex-basis: 100%;
-	}
-}
-.sign_up{
-	width: 100px;
-	height: 45px;
-	text-align: center;
-    background-color: #090303;
-	border: 2px solid black;
-    border-radius: 10px;
-	padding: 5px;
-	font-size: larger;
-	font-weight: bold;
-	transition: 1s;
-  }
-  .sign_up a{
-	text-decoration: none;
-	color: white;
-	transition: 1s;
-  }
-  .sign_up a:hover{
-	color: black;
-  }
-  .sign_up:hover{
-	width: 109px;
-	background-color: #b7b3b2;
-  }
